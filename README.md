@@ -25,7 +25,7 @@
 
 <br>
 
-**[⭐ Star this repo](https://github.com/actionstatelabs/android-action-kernel) • [🚀 Try it now](#-quick-start) • [💬 Join waitlist](#-cloud-api-waitlist)**
+**[⭐ Star this repo](https://github.com/actionstatelabs/android-action-kernel) • [🚀 Try it now](#-quick-start) • [💬 Join waitlist](https://www.actionstatelabs.com/)**
 
 </div>
 
@@ -405,7 +405,7 @@ screen_json = get_screen_state()
 - ✅ Pre-built integrations (WhatsApp, factoring apps, etc.)
 - ✅ Enterprise features (audit logs, compliance, SLAs)
 
-**[→ Join the waitlist](https://forms.gle/your-waitlist-link)** (Coming Q1 2026)
+**[→ Join the waitlist](https://www.actionstatelabs.com/)** (Coming Q1 2026)
 
 ---
 
@@ -470,7 +470,7 @@ Help logistics companies find this
 
 Get early Cloud API access
 
-[Sign up →](#-cloud-api-waitlist)
+[Sign up →](https://www.actionstatelabs.com/)
 
 </td>
 </tr>
