@@ -2,11 +2,11 @@
 
 <div align="center">
 
+# [Join Discord Community](https://discord.gg/HWaZByt5SA)
+
 <h1>AI Agents for Android Devices</h1>
 
 <h3>Open-source library for AI agents to control native Android apps</h3>
-
-# [Join Discord Community](https://discord.gg/HWaZByt5SA)
 
 **Built for field workers, logistics, gig economy, and mobile-first industries**
 
