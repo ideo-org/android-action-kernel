@@ -6,6 +6,8 @@
 
 <h3>Open-source library for AI agents to control native Android apps</h3>
 
+# [Join Discord Community](https://discord.gg/HWaZByt5SA)
+
 **Built for field workers, logistics, gig economy, and mobile-first industries**
 
 <br>
@@ -26,8 +28,6 @@
 <br>
 
 **[⭐ Star this repo (1100+ → 1,500 goal!)](https://github.com/actionstatelabs/android-action-kernel) • [Quick Start](#quick-start) • [Book Partnership Meeting](https://build.fillout.com/editor/ctqhgaBkaKus/share)**
-
-# [Join Discord Community](https://discord.gg/HWaZByt5SA)
 
 **5.3M+ views. 1100+ stars in days. Help us reach 1,500!** • **Priority partnerships:** Mobile QA testing • Consumer Productivity • [Request meeting →](https://build.fillout.com/editor/ctqhgaBkaKus/share)
 
