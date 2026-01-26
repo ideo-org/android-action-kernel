@@ -18,7 +18,13 @@ def get_interactive_elements(xml_content: str) -> List[Dict]:
     for node in root.iter():
         # Filter: We only care about elements that are interactive or have information
         is_clickable = node.attrib.get("clickable") == "true"
-        is_editable = node.attrib.get("focus") == "true" or node.attrib.get("focusable") == "true"
+        # Check for actual text input fields (not just focusable elements)
+        element_class = node.attrib.get("class", "")
+        is_editable = (
+            "EditText" in element_class or
+            "AutoCompleteTextView" in element_class or
+            node.attrib.get("editable") == "true"
+        )
         text = node.attrib.get("text", "")
         desc = node.attrib.get("content-desc", "")
         resource_id = node.attrib.get("resource-id", "")
@@ -38,6 +44,14 @@ def get_interactive_elements(xml_content: str) -> List[Dict]:
                 center_x = (x1 + x2) // 2
                 center_y = (y1 + y2) // 2
                 
+                # Determine suggested action based on element type
+                if is_editable:
+                    suggested_action = "type"
+                elif is_clickable:
+                    suggested_action = "tap"
+                else:
+                    suggested_action = "read"
+
                 element = {
                     "id": resource_id,
                     "text": text or desc,  # Fallback to content-desc if text is empty
@@ -45,7 +59,8 @@ def get_interactive_elements(xml_content: str) -> List[Dict]:
                     "bounds": bounds,
                     "center": (center_x, center_y),
                     "clickable": is_clickable,
-                    "action": "tap" if is_clickable else "read"
+                    "editable": is_editable,
+                    "action": suggested_action
                 }
                 elements.append(element)
             except Exception:
