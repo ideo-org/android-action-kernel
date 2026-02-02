@@ -47,10 +47,30 @@ def execute_action(action: Dict[str, Any]) -> None:
         _execute_back()
     elif act_type == "wait":
         _execute_wait()
+    elif act_type == "launch_app":
+        _execute_launch_app(action)
     elif act_type == "done":
         _execute_done()
     else:
         print(f"⚠️ Unknown action: {act_type}")
+
+
+def _execute_launch_app(action: Dict[str, Any]) -> None:
+    """Launch an app by package name."""
+    app_name = action.get("app_name", "")
+    package_name = action.get("package_name")
+
+    if not package_name:
+        # Fallback to simple matching if no package name provided (mock implementation for robustness)
+        # Real-world: Better to use exact package name
+        print(f"⚠️ No package name provided for {app_name}, trying monkey launch...")
+        run_adb_command(["shell", "monkey", "-p", app_name, "-c", "android.intent.category.LAUNCHER", "1"])
+        return
+
+    print(f"🚀 Launching App: {app_name} ({package_name})")
+    # Using monkey is often easier than am start if we don't know the main activity
+    run_adb_command(["shell", "monkey", "-p", package_name, "-c", "android.intent.category.LAUNCHER", "1"])
+
 
 
 def _execute_tap(action: Dict[str, Any]) -> None:

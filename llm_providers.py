@@ -30,6 +30,7 @@ Available Actions:
 - {"action": "swipe", "direction": "up/down/left/right", "reason": "Why you are swiping"}
 - {"action": "home", "reason": "Go to home screen"}
 - {"action": "back", "reason": "Go back"}
+- {"action": "launch_app", "app_name": "App Name", "package_name": "com.package.name", "reason": "Launch specific app"}
 - {"action": "wait", "reason": "Wait for loading"}
 - {"action": "done", "reason": "Task complete"}
 
@@ -54,6 +55,9 @@ Example - After typing a URL:
 
 Example - Opening app drawer to find an app:
 {"action": "swipe", "direction": "up", "reason": "Opening app drawer to find Maps"}
+
+Example - Launching an app directly:
+{"action": "launch_app", "app_name": "Settings", "package_name": "com.android.settings", "reason": "Opening Settings app"}
 """
 
 
